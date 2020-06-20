@@ -15,7 +15,6 @@ import java.util.List;
 @RequestMapping("/api/product/v1")
 public class ProductController {
 
-
     private final ProductService productService;
 
     @GetMapping
@@ -24,12 +23,12 @@ public class ProductController {
     }
 
     @GetMapping(value = "/{id}")
-    public Product retrieveProduct(@PathVariable Long id) {
+    public Product retrieveProduct(@PathVariable("id") Long id) {
         return productService.retrieveProduct(id);
     }
 
     @PutMapping(value = "/{id}")
-    public Product updateProduct(@PathVariable Long id, @RequestBody Product product) {
+    public Product updateProduct(@PathVariable("id") Long id, @RequestBody Product product) {
         return this.productService.updateProduct(id, product);
     }
 
@@ -40,7 +39,7 @@ public class ProductController {
 
 
     @DeleteMapping(value = "/{id}")
-    public void deleteProduct(@PathVariable Long id) {
+    public void deleteProduct(@PathVariable("id") Long id) {
         this.productService.deleteProduct(id);
     }
 

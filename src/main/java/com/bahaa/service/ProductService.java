@@ -20,8 +20,8 @@ public class ProductService {
 
     private static List<Product> products = Arrays.asList(
             new Product(1l, LocalDate.now(), null, "Whal supper tapper", 2L, 2.2),
-            new Product(1l, LocalDate.now(), null, "Whal elite pro", 30L, 2.2),
-            new Product(1l, LocalDate.now(), null, "Andis Master", 19L, 2.2)
+            new Product(2l, LocalDate.now(), null, "Whal elite pro", 30L, 2.2),
+            new Product(3l, LocalDate.now(), null, "Andis Master", 19L, 2.2)
     );
 
 
